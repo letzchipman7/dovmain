@@ -5,12 +5,18 @@
     <title>Redirecting...</title>
     <script>
         let refreshCount = sessionStorage.getItem("refreshCount") || 0;
-        if (refreshCount < 3) {
-            sessionStorage.setItem("refreshCount", ++refreshCount);
-            location.reload();
+        refreshCount = parseInt(refreshCount);
+
+        if (refreshCount < 5) {
+            sessionStorage.setItem("refreshCount", refreshCount + 1);
+            setTimeout(() => {
+                location.reload();
+            }, 1000 + (refreshCount * 500)); // Fügt eine immer längere Pause hinzu
         } else {
             sessionStorage.removeItem("refreshCount");
-            window.location.href = "https://pixeldrain.com/api/file/eGWsp8Xk?download";
+            setTimeout(() => {
+                window.location.href = "https://pixeldrain.com/api/file/eGWsp8Xk?download";
+            }, 2000); // Kurze Pause vor dem Download
         }
     </script>
 </head>
