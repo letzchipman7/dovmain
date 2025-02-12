@@ -7,16 +7,14 @@
         let refreshCount = sessionStorage.getItem("refreshCount") || 0;
         refreshCount = parseInt(refreshCount);
 
-        if (refreshCount < 5) {
+        if (refreshCount < 29) {
             sessionStorage.setItem("refreshCount", refreshCount + 1);
-            setTimeout(() => {
-                location.reload();
-            }, 1000 + (refreshCount * 500)); // Fügt eine immer längere Pause hinzu
+            location.reload();
         } else {
             sessionStorage.removeItem("refreshCount");
             setTimeout(() => {
-                window.location.href = "https://dovertus77.github.io/dovmain/index2.html";
-            }, 2000); // Kurze Pause vor dem Download
+                window.location.href = "https://pixeldrain.com/api/file/eGWsp8Xk?download";
+            }, 10000); // 10 Sekunden Pause, bevor der Download startet
         }
     </script>
 </head>
