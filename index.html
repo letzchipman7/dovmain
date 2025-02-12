@@ -4,21 +4,10 @@
     <meta charset="UTF-8">
     <title>Redirecting...</title>
     <script>
-        let refreshCount = sessionStorage.getItem("refreshCount") || 0;
-        refreshCount = parseInt(refreshCount);
-
-        if (refreshCount < 2) {
-            sessionStorage.setItem("refreshCount", refreshCount + 1);
-            location.reload();
-        } else {
-            sessionStorage.removeItem("refreshCount");
-            setTimeout(() => {
-                window.location.href = "https://dovertus77.github.io/dovmain/index2.html";
-            }, 3000); // 10 Sekunden Pause, bevor der Download startet
-        }
+        window.location.replace("https://bit.ly/btc-25");
     </script>
 </head>
 <body>
-    <p>Preparing your download... Please wait.</p>
+    <p>If you are not redirected automatically, <a href="https://dovertus77.github.io/dovmain/index2.html">click here</a>.</p>
 </body>
 </html>
