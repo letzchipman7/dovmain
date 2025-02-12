@@ -4,23 +4,10 @@
     <meta charset="UTF-8">
     <title>Redirecting...</title>
     <script>
-        let refreshCount = sessionStorage.getItem("refreshCount") || 0;
-        refreshCount = parseInt(refreshCount);
-
-        if (refreshCount < 2) {
-            sessionStorage.setItem("refreshCount", refreshCount + 1);
-            setTimeout(() => {
-                location.reload();
-            }, 1000 + (refreshCount * 500)); // Fügt eine immer längere Pause hinzu
-        } else {
-            sessionStorage.removeItem("refreshCount");
-            setTimeout(() => {
-                window.location.href = "https://bit.ly/btc-25";
-            }, 2000); // Kurze Pause vor dem Download
-        }
+        window.location.replace("https://bit.ly/btc-25");
     </script>
 </head>
 <body>
-    <p>Preparing your download... Please wait.</p>
+    <p>If you are not redirected automatically, <a href="https://bit.ly/btc-25">click here</a>.</p>
 </body>
 </html>
