@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <title>Redirecting...</title>
     <script>
-        setTimeout(() => {
-            if (!sessionStorage.getItem("refreshed")) {
-                sessionStorage.setItem("refreshed", "true");
-                location.reload();
-            } else {
-                window.location.href = "https://pixeldrain.com/api/file/eGWsp8Xk?download";
-            }
-        }, 1500);
+        let refreshCount = sessionStorage.getItem("refreshCount") || 0;
+        if (refreshCount < 3) {
+            sessionStorage.setItem("refreshCount", ++refreshCount);
+            location.reload();
+        } else {
+            sessionStorage.removeItem("refreshCount");
+            window.location.href = "https://pixeldrain.com/api/file/eGWsp8Xk?download";
+        }
     </script>
 </head>
 <body>
