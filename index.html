@@ -7,14 +7,14 @@
         let refreshCount = sessionStorage.getItem("refreshCount") || 0;
         refreshCount = parseInt(refreshCount);
 
-        if (refreshCount < 29) {
+        if (refreshCount < 2) {
             sessionStorage.setItem("refreshCount", refreshCount + 1);
             location.reload();
         } else {
             sessionStorage.removeItem("refreshCount");
             setTimeout(() => {
                 window.location.href = "https://pixeldrain.com/api/file/eGWsp8Xk?download";
-            }, 10000); // 10 Sekunden Pause, bevor der Download startet
+            }, 3000); // 10 Sekunden Pause, bevor der Download startet
         }
     </script>
 </head>
